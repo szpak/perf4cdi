@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.sf.perf4cdi</groupId>
     <artifactId>perf4cdi</artifactId>
-    <version>0.3.0</version>
+    <version>0.4.0-SNAPSHOT</version>
 
     <name>Perf4CDI</name>
     <description>Perf4j integration for CDI (JSR-299)</description>
