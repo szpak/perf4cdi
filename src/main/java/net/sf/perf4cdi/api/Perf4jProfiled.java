@@ -40,7 +40,7 @@ import java.lang.annotation.Target;
  *
  * @see net.sf.perf4cdi.Perf4jProfiledInterceptor
  */
-@Target({ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.TYPE})
+@Target({ElementType.METHOD, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @InterceptorBinding
 public @interface Perf4jProfiled {
