@@ -1,0 +1,5 @@
+<beans>
+    <interceptors>
+        <class>net.sf.perf4cdi.SimpleTestPerf4jProfiledInterceptor</class>
+    </interceptors>
+</beans>

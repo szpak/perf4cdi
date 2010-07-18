@@ -51,15 +51,55 @@
             <groupId>commons-jexl</groupId>
             <artifactId>commons-jexl</artifactId>
             <version>1.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.6.0</version>
+            <!-- 1.5.11 is required by cal10n-api 0.7.2 used by Weld 1.0.1. perf4cdi itself is compatible with slf4j 1.6.x -->
+            <version>1.5.11</version>
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>5.11</version>
+            <scope>test</scope>
+            <classifier>jdk15</classifier>
+            <exclusions>
+                <exclusion>
+                    <!-- is it required when no JUnit API is used -->
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.weld</groupId>
+            <artifactId>weld-core-test</artifactId>
+            <version>1.0.1-Final</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>0.9.20</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- required by weld-core(-test) -->
+        <dependency>
+            <groupId>ch.qos.cal10n</groupId>
+            <artifactId>cal10n-api</artifactId>
+            <version>0.7.2</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
