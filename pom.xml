@@ -17,6 +17,12 @@
         </license>
     </licenses>
 
+    <scm>
+        <connection>scm:git:git://perf4cdi.git.sourceforge.net/gitroot/perf4cdi/perf4cdi</connection>
+        <developerConnection>scm:git:ssh://perf4cdi.git.sourceforge.net/gitroot/perf4cdi/perf4cdi</developerConnection>
+        <url>http://perf4cdi.git.sourceforge.net/git/gitweb.cgi?p=perf4cdi/perf4cdi</url>
+    </scm>
+
     <developers>
         <developer>
             <id>szpak</id>
