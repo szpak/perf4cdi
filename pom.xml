@@ -161,16 +161,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.0</version>
-                <configuration>
-                    <!-- Workaround for http://jira.codehaus.org/browse/MGPG-9 -->
-                    <mavenExecutorId>forked-path</mavenExecutorId>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 
@@ -212,6 +202,19 @@
                                 </goals>
                             </execution>
                         </executions>
+                    </plugin>
+                    <!-- moved to release profile to doesn't have any SNAPSHOT dependencies in normal build -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-release-plugin</artifactId>
+                        <!-- Temporary workaround for http://jira.codehaus.org/browse/SCM-444 -->
+                        <version>2.1-SNAPSHOT</version>
+                        <configuration>
+                            <!-- Workaround for http://jira.codehaus.org/browse/MGPG-9 -->
+                            <mavenExecutorId>forked-path</mavenExecutorId>
+                            <pushChanges>false</pushChanges>
+                            <allowTimestampedSnapshots>true</allowTimestampedSnapshots>
+                        </configuration>
                     </plugin>
                 </plugins>
             </build>
