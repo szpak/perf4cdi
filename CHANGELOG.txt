@@ -1,4 +1,8 @@
 Perf4CDI changelog.
 
+0.4.0 (2010-07-28):
+ - added mock unit tests
+ - availability in Maven Cetral Repository
+
 0.3.0 (2010-07-02):
  - initial public release

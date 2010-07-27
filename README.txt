@@ -21,9 +21,9 @@ Those things are already available and ready to use:
 Things planned to implement in the nearest future:
  - CDI factory to produce loggers
  - ability to work as CDI extension (needed?)
- - move project's SCM to SourceForge
- - add unit tests
- - put project's jars into public Maven repository
+ - move project's SCM to SourceForge - DONE
+ - add unit tests - DONE
+ - put project's jars into public Maven repository - DONE
  - further suggestions are welcome
 
 Note: Perf4CDI in current version does its job, but there are a few things to improve, so it is not possible to quarantine a backward compatibility of the future versions. Therefore it should be used in production environmental carefully.
@@ -47,11 +47,8 @@ For Maven projects it's required to add perf4cdi dependency to application's pom
 <dependency>
     <groupId>net.sf.perf4cdi</groupId>
     <artifactId>perf4cdi</artifactId>
-    <version>0.3.0</version>
+    <version>0.4.0</version>
 </dependency>
-
-Note: Because Perf4CDI is in early development stage their JARs aren't available in Central Maven Repository and have to be taken from download page and installed directly in local Maven repository for example using following command (in one line):
-mvn install:install-file -DgroupId=net.sf.perf4jcdi -DartifactId=perf4jcdi -Dversion=0.3.0 -Dpackaging=jar -Dfile=perf4cdi-0.3.0.jar
 
 Because Perf4CDI was created for CDI based applications it is assumed that cdi-api (tested with 1.0-SP1) is provided by runtime environment.
 Perf4CDI internally uses slf4j API for logging. slf4j-api (tested with 1.6.0) should be provided as well.
