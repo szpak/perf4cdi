@@ -80,3 +80,25 @@ After execution of profiled method(s) you should be able to see message similar 
 INFO  [org.perf4j.TimingLogger] start[1267557706784] time[1075] tag[profiledMethodTag]
 
 Happy profiling with CDI and Perf4j!
+
+
+===================
+
+Developer's guide - only for contributors
+
+Perf4CDI itself depends only on packages which are available in Maven Central Repository. For test purposes however it uses mechanisms from weld-core-test which depends on JARs available only in JBoss' Maven Repository. Because of that to build Perf4CDI from source (only contributors would need to do that - for normal usage in end applications Maven Central Repository should be enough) it's required to add repository in settings.xml located in user's home directory:
+
+<repositories>
+    (... - some other repositories)
+    <repository>
+        <id>jboss</id>
+        <url>http://repository.jboss.com/maven2</url>
+        <releases>
+            <enabled>true<enabled>
+        </releases>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </repository>
+</repositories>
+
