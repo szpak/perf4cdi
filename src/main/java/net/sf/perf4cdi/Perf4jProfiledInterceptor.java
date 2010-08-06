@@ -35,6 +35,7 @@ import java.lang.reflect.Method;
  * @author Marcin Zajączkowski, 2010-05-17
  *
  * @see net.sf.perf4cdi.api.Perf4jProfiled
+ * @see org.perf4j.aop.Profiled
  */
 @Interceptor
 @Perf4jProfiled
