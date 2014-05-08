@@ -25,6 +25,7 @@ import org.perf4j.aop.Profiled;
 import javax.interceptor.AroundInvoke;
 import javax.interceptor.Interceptor;
 import javax.interceptor.InvocationContext;
+import java.io.Serializable;
 import java.lang.reflect.Method;
 
 /**
@@ -39,7 +40,7 @@ import java.lang.reflect.Method;
  */
 @Interceptor
 @Perf4jProfiled
-public class Perf4jProfiledInterceptor {
+public class Perf4jProfiledInterceptor implements Serializable {
 
     private static final long serialVersionUID = -8572318944020712128L;
 
